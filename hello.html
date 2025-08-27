@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="kn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karnataka Flag</title>
+  <style>
+    :root{
+      --yellow: #FFD100; /* top band */
+      --red:    #C8102E; /* bottom band (close to flag red) */
+      --text:   #ffffff;
+    }
+
+    html,body {
+      height: 100%;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #f3f4f6;
+      font-family: "Noto Sans Kannada", "Noto Sans", "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    /* Flag container keeps approx 3:2 ratio and is responsive */
+    .flag {
+      width: min(900px, 85vw);
+      aspect-ratio: 3 / 2;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+      display: grid;
+      grid-template-rows: 1fr 1fr; /* two equal horizontal bands */
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .band { display:flex; align-items:center; justify-content:center; }
+    .top { background: var(--yellow); }
+    .bottom { background: var(--red); color: var(--text); }
+
+    /* Kannada text centered across both bands */
+    .center-text {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.06);
+      color: #111827;
+      transform: translateY(-18%); /* pull up so it sits slightly on the yellow band */
+    }
+
+    /* If you prefer the text to be white and centered on the red band, uncomment below */
+    /* .center-text { color: white; transform: translateY(0); } */
+
+    /* small caption under the flag */
+    .caption {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align:center;">
+    <div class="flag" role="img" aria-label="Flag of Karnataka (yellow and red horizontal bands)">
+      <div class="band top"></div>
+      <div class="band bottom"></div>
+
+      <!-- Centered Kannada text overlay -->
+      <div class="center-text" aria-hidden="true">ಕರ್ನಾಟಕ</div>
+    </div>
+
+    <div class="caption">Karnataka flag — yellow (top) and red (bottom). The Kannada text is decorative.</div>
+  </div>
+</body>
+</html>
+
+
+
+<html>sunil</html>
